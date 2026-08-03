@@ -1,49 +1,87 @@
-<div align="center">
+# Coding Solutions
 
-# 🧠 Coding Solutions
+> A collection of my accepted solutions from LeetCode, GeeksforGeeks, HackerRank, and CodeChef. Automatically synchronized to GitHub.
 
-![Total Solved](https://img.shields.io/badge/Total_Solved-2-blue?style=for-the-badge)
-![Streak](https://img.shields.io/badge/Streak-1_days-orange?style=for-the-badge)
-![Last Synced](https://img.shields.io/badge/Last_Synced-8--3--2026-green?style=for-the-badge)
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                     Coding Solutions Terminal                       │
+└─────────────────────────────────────────────────────────────────────┘
 
-> 🚀 Auto-synced by [**PushMyCode**](https://github.com/PushMyCode-HQ) — solve it, forget it, it's on GitHub.
+abhiram@github:~$ whoami
+Competitive Programmer
 
-</div>
+abhiram@github:~$ pwd
+~/coding-solutions
+
+abhiram@github:~$ platforms
+
+LeetCode
+GeeksforGeeks
+HackerRank
+CodeChef
+
+abhiram@github:~$ status
+
+Repository      : ONLINE
+Git Status      : CLEAN
+Sync            : AUTOMATIC
+Default Branch  : main
+Last Updated    : 2026-08-03
+
+abhiram@github:~$ stats
+
+Total Solved    : 2
+Current Streak  : 1 Day
+
+Difficulty
+───────────────
+Easy            : 0
+Medium          : 2
+Hard            : 0
+
+Languages
+───────────────
+Java            : 2
+
+abhiram@github:~$ tree
+
+coding-solutions
+├── leetcode
+│   ├── easy
+│   ├── medium
+│   └── hard
+├── gfg
+├── hackerrank
+└── codechef
+
+abhiram@github:~$ next
+
+Goal            : 100 Problems
+Progress        : 2 / 100
+
+abhiram@github:~$ exit
+
+Session terminated.
+```
 
 ---
 
-## 📊 Stats
+### Repository Structure
 
-| Difficulty | Solved |
-|:---:|:---:|
-| 🟢 Easy | **0** |
-| 🟡 Medium | **2** |
-| 🔴 Hard | **0** |
-| **Total** | **2** |
-
-## 🛠️ Languages
-
-| Language | Solutions |
-|:---:|:---:|
-| Java | **2** |
-
-## 📂 Repository Structure
-
-```
-📦 coding-solutions/
+```text
+coding-solutions/
 ├── leetcode/
 │   ├── easy/
 │   ├── medium/
 │   └── hard/
+├── gfg/
 ├── hackerrank/
-├── codechef/
-└── gfg/
+└── codechef/
 ```
 
 ---
 
-<div align="center">
-
-*Last updated: 2026-08-03* · Powered by [**PushMyCode**](https://github.com/PushMyCode-HQ)
-
-</div>
+```
+Auto synchronization enabled.
+Every accepted submission is committed and pushed automatically.
+```
