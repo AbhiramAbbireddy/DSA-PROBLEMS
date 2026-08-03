@@ -1,87 +1,85 @@
-# Coding Solutions
-
-> A collection of my accepted solutions from LeetCode, GeeksforGeeks, HackerRank, and CodeChef. Automatically synchronized to GitHub.
+<div align="center">
 
 ```
-┌─────────────────────────────────────────────────────────────────────┐
-│                     Coding Solutions Terminal                       │
-└─────────────────────────────────────────────────────────────────────┘
-
-abhiram@github:~$ whoami
-Competitive Programmer
-
-abhiram@github:~$ pwd
-~/coding-solutions
-
-abhiram@github:~$ platforms
-
-LeetCode
-GeeksforGeeks
-HackerRank
-CodeChef
-
-abhiram@github:~$ status
-
-Repository      : ONLINE
-Git Status      : CLEAN
-Sync            : AUTOMATIC
-Default Branch  : main
-Last Updated    : 2026-08-03
-
-abhiram@github:~$ stats
-
-Total Solved    : 2
-Current Streak  : 1 Day
-
-Difficulty
-───────────────
-Easy            : 0
-Medium          : 2
-Hard            : 0
-
-Languages
-───────────────
-Java            : 2
-
-abhiram@github:~$ tree
-
-coding-solutions
-├── leetcode
-│   ├── easy
-│   ├── medium
-│   └── hard
-├── gfg
-├── hackerrank
-└── codechef
-
-abhiram@github:~$ next
-
-Goal            : 100 Problems
-Progress        : 2 / 100
-
-abhiram@github:~$ exit
-
-Session terminated.
+┌─────────────────────────────────────────────────────────┐
+│  O1Dream@judge-server:~$ ./run_all_solutions.sh          │
+│                                                           │
+│  compiling...                                            │
+│  status: PASS                                            │
+│  runtime: beats 1 day streak                             │
+│  language: java                                          │
+│                                                           │
+└─────────────────────────────────────────────────────────┘
 ```
+
+# THE COMPILE LOG
+
+*A running record of problems submitted, judged, and accepted.*
+
+`solved: 2`  `streak: 1 day`  `last sync: 2026-08-03`  `stack: Java`
+
+</div>
 
 ---
 
-### Repository Structure
+## submission history
 
-```text
+```
+$ git log --oneline --stat
+
+commit 2  medium  accepted  runtime: O(n log n)
+commit 1  medium  accepted  runtime: O(n)
+
+  2 files changed, 2 problems solved, 0 problems skipped
+```
+
+## difficulty breakdown
+
+```
+easy    [                    ]   0
+medium  [####################]   2
+hard    [                    ]   0
+────────────────────────────────────
+total                            2
+```
+
+## language stack
+
+```
+java  ████████████████████  100%   2 solutions
+```
+
+## directory tree
+
+```
 coding-solutions/
 ├── leetcode/
 │   ├── easy/
-│   ├── medium/
+│   ├── medium/      <- current front line
 │   └── hard/
-├── gfg/
 ├── hackerrank/
-└── codechef/
+├── codechef/
+└── gfg/
+```
+
+## build log
+
+```
+[2026-08-03 00:00:00] INIT      streak started
+[2026-08-03 00:00:01] ACCEPTED  medium #1
+[2026-08-03 00:00:02] ACCEPTED  medium #2
+[2026-08-03 00:00:03] SYNC      pushed to origin/main
+[         pending    ] NEXT     hard problem, first attempt
 ```
 
 ---
 
+<div align="center">
+
 ```
-Auto synchronization enabled.
-Every accepted submission is committed and pushed automatically.
+exit code: 0
 ```
+
+*last updated 2026-08-03 · synced automatically by* [**PushMyCode**](https://github.com/PushMyCode-HQ)
+
+</div>
