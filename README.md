@@ -1,85 +1,49 @@
 <div align="center">
 
-```
-┌─────────────────────────────────────────────────────────┐
-│  O1Dream@judge-server:~$ ./run_all_solutions.sh          │
-│                                                           │
-│  compiling...                                            │
-│  status: PASS                                            │
-│  runtime: beats 1 day streak                             │
-│  language: java                                          │
-│                                                           │
-└─────────────────────────────────────────────────────────┘
-```
+# 🧠 Coding Solutions
 
-# THE COMPILE LOG
+![Total Solved](https://img.shields.io/badge/Total_Solved-3-blue?style=for-the-badge)
+![Streak](https://img.shields.io/badge/Streak-1_days-orange?style=for-the-badge)
+![Last Synced](https://img.shields.io/badge/Last_Synced-8--3--2026-green?style=for-the-badge)
 
-*A running record of problems submitted, judged, and accepted.*
-
-`solved: 2`  `streak: 1 day`  `last sync: 2026-08-03`  `stack: Java`
+> 🚀 Auto-synced by [**PushMyCode**](https://github.com/PushMyCode-HQ) — solve it, forget it, it's on GitHub.
 
 </div>
 
 ---
 
-## submission history
+## 📊 Stats
+
+| Difficulty | Solved |
+|:---:|:---:|
+| 🟢 Easy | **0** |
+| 🟡 Medium | **3** |
+| 🔴 Hard | **0** |
+| **Total** | **3** |
+
+## 🛠️ Languages
+
+| Language | Solutions |
+|:---:|:---:|
+| Java | **3** |
+
+## 📂 Repository Structure
 
 ```
-$ git log --oneline --stat
-
-commit 2  medium  accepted  runtime: O(n log n)
-commit 1  medium  accepted  runtime: O(n)
-
-  2 files changed, 2 problems solved, 0 problems skipped
-```
-
-## difficulty breakdown
-
-```
-easy    [                    ]   0
-medium  [####################]   2
-hard    [                    ]   0
-────────────────────────────────────
-total                            2
-```
-
-## language stack
-
-```
-java  ████████████████████  100%   2 solutions
-```
-
-## directory tree
-
-```
-coding-solutions/
+📦 coding-solutions/
 ├── leetcode/
 │   ├── easy/
-│   ├── medium/      <- current front line
+│   ├── medium/
 │   └── hard/
 ├── hackerrank/
 ├── codechef/
 └── gfg/
 ```
 
-## build log
-
-```
-[2026-08-03 00:00:00] INIT      streak started
-[2026-08-03 00:00:01] ACCEPTED  medium #1
-[2026-08-03 00:00:02] ACCEPTED  medium #2
-[2026-08-03 00:00:03] SYNC      pushed to origin/main
-[         pending    ] NEXT     hard problem, first attempt
-```
-
 ---
 
 <div align="center">
 
-```
-exit code: 0
-```
-
-*last updated 2026-08-03 · synced automatically by* [**PushMyCode**](https://github.com/PushMyCode-HQ)
+*Last updated: 2026-08-03* · Powered by [**PushMyCode**](https://github.com/PushMyCode-HQ)
 
 </div>
