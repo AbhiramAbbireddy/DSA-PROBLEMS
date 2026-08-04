@@ -54,23 +54,23 @@ The smallest integer is 1 and the largest is 5, so the full range should be `[1,
 ## Solution
 
 **Language:** Java  
-**Runtime:** 3 ms (beats 81.76%)  
-**Memory:** 46.8 MB (beats 67.71%)  
-**Submitted:** 2026-08-04T00:14:18.116Z  
+**Runtime:** 1 ms (beats 100.00%)  
+**Memory:** 47 MB (beats 42.16%)  
+**Submitted:** 2026-08-04T00:16:17.892Z  
 
 ```java
 class Solution {
     public List<Integer> findMissingElements(int[] nums) {
         List<Integer> list=new ArrayList<>();
         int min=nums[0],max=nums[1];
-        HashSet<Integer> set=new HashSet<>();
+        boolean[] vis=new boolean[101];
         for(int i=0;i<nums.length;i++) {
             min=Math.min(nums[i],min);
             max=Math.max(nums[i],max);
-            set.add(nums[i]);
+            vis[nums[i]]=true;
         }
-        for(int i=min;i<=max;i++) {
-            if(!set.contains(i)) list.add(i);
+        for(int i=min;i<max;i++) {
+            if(!vis[i]) list.add(i);
         }
         return list;
     }
