@@ -10,9 +10,9 @@ class Solution {
                     continue;
                 } else {
                     int up=grid[i][j];
-                    up+=(i>0)?prev[j]:(int) 1e9;
+                    up+=(i>0)?prev[j]:1_000_000_000;
                     int left=grid[i][j];
-                    left+=(j>0)?temp[j-1]:(int) 1e9;
+                    left+=(j>0)?temp[j-1]:1_000_000_000;
                     temp[j]=Math.min(up,left);
                 }
             }
