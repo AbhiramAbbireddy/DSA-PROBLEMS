@@ -39,30 +39,32 @@ Output: 12
 ## Solution
 
 **Language:** Java  
-**Runtime:** 6 ms (beats 10.22%)  
-**Memory:** 50.4 MB (beats 21.58%)  
-**Submitted:** 2026-08-08T06:44:21.180Z  
+**Runtime:** 5 ms (beats 25.32%)  
+**Memory:** 50.1 MB (beats 85.98%)  
+**Submitted:** 2026-08-08T06:49:20.424Z  
 
 ```java
 class Solution {
     public int minPathSum(int[][] grid) {
         int m=grid.length,n=grid[0].length;
-        int[][] dp=new int[m][n];
+        int[] prev=new int[n];
         for(int i=0;i<m;i++) {
+            int[] temp=new int[n];
             for(int j=0;j<n;j++) {
-                if(i==0 && j==0) dp[i][j]=grid[0][0];
-                else {
+                if(i==0 && j==0) {
+                    temp[j]=grid[0][0];
+                    continue;
+                } else {
                     int up=grid[i][j];
-                    if(i>0) up+=dp[i-1][j];
-                    else up+=(int) 1e9;
+                    up+=(i>0)?prev[j]:(int) 1e9;
                     int left=grid[i][j];
-                    if(j>0) left+=dp[i][j-1];
-                    else left+=(int) 1e9;
-                    dp[i][j]=Math.min(up,left);
+                    left+=(j>0)?temp[j-1]:(int) 1e9;
+                    temp[j]=Math.min(up,left);
                 }
             }
+            prev=temp;
         }
-        return dp[m-1][n-1];
+        return prev[n-1];
     }
 }
 ```
