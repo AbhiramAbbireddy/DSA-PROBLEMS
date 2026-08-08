@@ -39,25 +39,30 @@ Output: 12
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 99.90%)  
-**Memory:** 50.1 MB (beats 85.98%)  
-**Submitted:** 2026-08-08T06:24:44.525Z  
+**Runtime:** 6 ms (beats 10.22%)  
+**Memory:** 50.4 MB (beats 21.58%)  
+**Submitted:** 2026-08-08T06:44:21.180Z  
 
 ```java
 class Solution {
-    private int solve(int i,int j,int[][] grid,int[][] dp) {
-        if(i==0 && j==0) return grid[0][0];
-        if(i<0 || j<0) return 1_000_000_000;
-        if(dp[i][j]!=-1) return dp[i][j];
-        int up=grid[i][j]+solve(i-1,j,grid,dp);
-        int left=grid[i][j]+solve(i,j-1,grid,dp);
-        return dp[i][j]=Math.min(up,left);
-    }
     public int minPathSum(int[][] grid) {
-        int[][] dp=new int[grid.length][grid[0].length];
-        for(int[] r: dp)
-            Arrays.fill(r,-1);
-        return solve(grid.length-1,grid[0].length-1,grid,dp);
+        int m=grid.length,n=grid[0].length;
+        int[][] dp=new int[m][n];
+        for(int i=0;i<m;i++) {
+            for(int j=0;j<n;j++) {
+                if(i==0 && j==0) dp[i][j]=grid[0][0];
+                else {
+                    int up=grid[i][j];
+                    if(i>0) up+=dp[i-1][j];
+                    else up+=(int) 1e9;
+                    int left=grid[i][j];
+                    if(j>0) left+=dp[i][j-1];
+                    else left+=(int) 1e9;
+                    dp[i][j]=Math.min(up,left);
+                }
+            }
+        }
+        return dp[m-1][n-1];
     }
 }
 ```
