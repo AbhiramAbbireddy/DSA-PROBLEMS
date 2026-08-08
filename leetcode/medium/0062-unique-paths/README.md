@@ -42,23 +42,27 @@ Explanation: From the top-left corner, there are a total of 3 ways to reach the 
 
 **Language:** Java  
 **Runtime:** 0 ms (beats 100.00%)  
-**Memory:** 42.2 MB (beats 29.55%)  
-**Submitted:** 2026-08-07T16:26:31.156Z  
+**Memory:** 42 MB (beats 66.60%)  
+**Submitted:** 2026-08-08T06:09:38.770Z  
 
 ```java
 class Solution {
     public int uniquePaths(int m, int n) {
-        int[][] dp=new int[m][n];
-        for(int i=0;i<m;i++)
-            dp[i][0]=1;
-        for(int i=0;i<n;i++)
-            dp[0][i]=1;
-        for(int i=1;i<m;i++) {
-            for(int j=1;j<n;j++) {
-                dp[i][j]=dp[i-1][j]+dp[i][j-1];
+        int[] prev=new int[n];
+        for(int i=0;i<m;i++) {
+            int[] temp=new int[n];
+            for(int j=0;j<n;j++) {
+                if(i==0 && j==0) {
+                    temp[j]=1;
+                    continue;
+                }
+                int up=(i>0)?prev[j]:0;
+                int left=(j>0)?temp[j-1]:0;
+                temp[j]=up+left;
             }
+            prev=temp;
         }
-        return dp[m-1][n-1];
+        return prev[n-1];
     }
 }
 ```
