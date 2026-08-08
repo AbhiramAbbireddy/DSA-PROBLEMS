@@ -40,8 +40,8 @@ Output: 12
 
 **Language:** Java  
 **Runtime:** 5 ms (beats 25.32%)  
-**Memory:** 50.1 MB (beats 85.98%)  
-**Submitted:** 2026-08-08T06:49:20.424Z  
+**Memory:** 50.3 MB (beats 56.92%)  
+**Submitted:** 2026-08-08T06:50:40.691Z  
 
 ```java
 class Solution {
@@ -56,9 +56,9 @@ class Solution {
                     continue;
                 } else {
                     int up=grid[i][j];
-                    up+=(i>0)?prev[j]:(int) 1e9;
+                    up+=(i>0)?prev[j]:1_000_000_000;
                     int left=grid[i][j];
-                    left+=(j>0)?temp[j-1]:(int) 1e9;
+                    left+=(j>0)?temp[j-1]:1_000_000_000;
                     temp[j]=Math.min(up,left);
                 }
             }
