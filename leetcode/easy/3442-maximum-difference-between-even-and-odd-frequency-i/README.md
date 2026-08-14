@@ -48,21 +48,22 @@ Return this  **maximum**  difference.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 100.00%)  
-**Memory:** 43.5 MB (beats 82.55%)  
-**Submitted:** 2026-08-14T00:23:35.774Z  
+**Runtime:** 4 ms (beats 15.47%)  
+**Memory:** 43.7 MB (beats 74.28%)  
+**Submitted:** 2026-08-14T00:28:04.865Z  
 
 ```java
 class Solution {
     public int maxDifference(String s) {
         int[] freq=new int[26];
-        for(char c: s.toCharArray()) freq[c-'a']++;
-        int largest=Integer.MIN_VALUE,small=Integer.MAX_VALUE;
-        for(int i=0;i<26;i++) {
-            if(freq[i]!=0 && (freq[i]&1)==1) largest=Math.max(largest,freq[i]);
-            if(freq[i]!=0 && (freq[i]&1)==0) small=Math.min(small,freq[i]);
+        s.chars().forEach(c->freq[c-'a']++);
+        int maxOdd=0,minEven=Integer.MAX_VALUE;
+        for(int count: freq) {
+            if(count==0) continue;
+            if((count&1)==1) maxOdd=Math.max(maxOdd,count);
+            else minEven=Math.min(minEven,count);
         }
-        return largest-small;
+        return maxOdd-minEven;
     }
 }
 ```
