@@ -45,9 +45,9 @@ So we return 10 since it's larger.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 21 ms (beats 8.65%)  
-**Memory:** 44.4 MB (beats 45.54%)  
-**Submitted:** 2026-08-14T01:42:21.009Z  
+**Runtime:** 22 ms (beats 5.60%)  
+**Memory:** 44.5 MB (beats 33.01%)  
+**Submitted:** 2026-08-14T01:41:25.653Z  
 
 ```java
 class Solution {
