@@ -37,20 +37,31 @@ Output: "rM gniD"
 ## Solution
 
 **Language:** Java  
-**Runtime:** 5 ms (beats 52.83%)  
-**Memory:** 46.9 MB (beats 37.48%)  
-**Submitted:** 2026-08-31T13:39:21.779Z  
+**Runtime:** 4 ms (beats 85.45%)  
+**Memory:** 46.4 MB (beats 81.21%)  
+**Submitted:** 2026-08-31T13:45:54.132Z  
 
 ```java
 class Solution {
     public String reverseWords(String s) {
-        String[] arr=s.split(" ");
-        StringBuilder str=new StringBuilder();
-        for(int i=0;i<arr.length;i++) {
-            str.append(new StringBuilder(arr[i]).reverse().toString());
-            if(i!=arr.length-1) str.append(" ");
+        char[] arr=s.toCharArray();
+        int start=0;
+        for(int end=0;end<=arr.length;end++) {
+            if(end==arr.length || arr[end]==' ') {
+                reverse(arr,start,end-1);
+                start=end+1;
+            }
         }
-        return str.toString();
+        return new String(arr);
+    }
+    void reverse(char[] arr,int left,int right) {
+        while(left<right) {
+            char temp=arr[left];
+            arr[left]=arr[right];
+            arr[right]=temp;
+            left++;
+            right--;
+        }
     }
 }
 ```
