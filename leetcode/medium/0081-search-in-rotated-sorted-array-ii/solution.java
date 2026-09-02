@@ -1,25 +1,19 @@
 class Solution {
-    public boolean search(int[] arr, int t) {
-        int l=0,h=arr.length-1;
-        while(l<=h) {
-            int m=l+(h-l)/2;
-            if(arr[m]==t)
-                return true;
-            if(arr[l]==arr[m] && arr[m]==arr[h]) {
-                l++;
-                h--;
+    public boolean search(int[] nums, int target) {
+        int low=0,high=nums.length-1;
+        while(low<=high) {
+            int mid=low+(high-low)/2;
+            if(nums[mid]==target) return true;
+            if(nums[low]==nums[mid] && nums[mid]==nums[high]) {
+                low++;
+                high--;
             }
-            else if(arr[l]<=arr[m]) {
-                if(t>=arr[l] && t<arr[m])
-                    h=m-1;
-                else
-                    l=m+1;
-            } 
-            else {
-                if(t>arr[m] && t<=arr[h])
-                    l=m+1;
-                else
-                    h=m-1;
+            else if(nums[low]<=nums[mid]) {
+                if(nums[low]<=target && target<nums[mid]) high=mid-1;
+                else low=mid+1;
+            } else {
+                if(target>nums[mid] && target<=nums[high]) low=mid+1;
+                else high=mid-1;
             }
         }
         return false;
