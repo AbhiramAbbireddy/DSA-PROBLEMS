@@ -52,21 +52,14 @@ Return `true` if it is possible to construct such an array, otherwise, return `f
 ## Solution
 
 **Language:** Java  
-**Runtime:** 1 ms (beats 31.89%)  
-**Memory:** 45 MB (beats 73.43%)  
-**Submitted:** 2026-09-02T14:02:51.648Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 44.6 MB (beats 99.01%)  
+**Submitted:** 2026-09-03T00:34:05.795Z  
 
 ```java
 class Solution {
     public boolean uniformArray(int[] nums1) {
-        int odd=0,even=0;
-        for(int x: nums1) {
-            if((x&1)==1) odd++;
-            else even++;
-        }
-        boolean allEven=(odd==0 || odd>=2);
-        boolean allOdd=(even==0 || odd>=1);
-        return allEven || allOdd;
+        return true;
     }
 }
 ```
