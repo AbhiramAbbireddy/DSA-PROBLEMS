@@ -69,9 +69,9 @@ The mail of user 7 starts with a period.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 136 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-06T01:32:51.230Z  
+**Runtime:** 348 ms (beats 97.25%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-06T01:32:55.777Z  
 
 ```sql
 -- Write your PostgreSQL query statement below
