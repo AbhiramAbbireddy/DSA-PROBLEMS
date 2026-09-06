@@ -58,15 +58,16 @@ Explanation: Bob and George both have a condition that starts with DIAB1.
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 124 ms  
-**Memory:** 0B  
-**Submitted:** 2026-09-06T01:40:30.179Z  
+**Runtime:** 175 ms (beats 84.93%)  
+**Memory:** 0B (beats 100.00%)  
+**Submitted:** 2026-09-06T01:42:51.136Z  
 
 ```sql
 -- Write your PostgreSQL query statement below
 select patient_id , patient_name , conditions
 from Patients 
-where conditions like '%DIAB1%';
+where conditions like 'DIAB1%'
+    or conditions like '% DIAB1%';
 ```
 
 ---
