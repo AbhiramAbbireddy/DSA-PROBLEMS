@@ -58,9 +58,9 @@ Explanation: john@example.com is repeated two times. We keep the row with the sm
 ## Solution
 
 **Language:** SQL  
-**Runtime:** 372 ms (beats 5.25%)  
+**Runtime:** 234 ms (beats 70.26%)  
 **Memory:** 0B (beats 100.00%)  
-**Submitted:** 2026-09-06T01:36:04.215Z  
+**Submitted:** 2026-09-06T01:36:14.305Z  
 
 ```sql
 -- Write your PostgreSQL query statement below
