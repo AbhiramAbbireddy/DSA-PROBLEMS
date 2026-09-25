@@ -54,9 +54,9 @@ If no such index exists, return `-1`.
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 42.4 MB  
-**Submitted:** 2026-09-25T11:19:40.917Z  
+**Runtime:** 1 ms (beats 99.69%)  
+**Memory:** 45.4 MB (beats 89.94%)  
+**Submitted:** 2026-09-25T11:19:44.280Z  
 
 ```java
 class Solution {
